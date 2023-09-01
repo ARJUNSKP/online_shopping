@@ -1,0 +1,33 @@
+<nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">   
+        ProductWorld
+      </a>
+      <hr>
+    </div>
+</nav>
+<div id="baner" >
+    <div class="text-center py-5" id="mainbanner">
+        <form [formGroup]="searchinputform">
+            <input formControlName="search" type="search" name="searchPrt" placeholder="Enter the product name" class="mt-5 text-center" id="search">
+            <button class="mx-1" id="buttonsearch" (click)="SearchProduct()">Search</button>
+        </form>
+    </div>
+    <div id="cardproduct" class="my-5">
+        <div *ngFor="let i of product | sort : searchData :'title'">
+            <div class="card">
+                <img src="{{i.image}}" class="card-img-top cardimg" alt="..." style="height: 20rem;" >
+                <div class="card-body"id="text-card">
+                    <h5 class="card-title text-center container" style="height: 7rem;">{{i.title}}</h5>
+                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                    <p style="height: 1rem;">Price:-{{i.price}}</p>
+                    <div style="display: flex;justify-content: space-between;">
+                        <button (click)="productView(i.id)" class="btn btn-outline-primary">View Product</button>
+                        <button class="btn btn-outline-success">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

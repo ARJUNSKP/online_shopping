@@ -1,0 +1,64 @@
+/* nav{
+    background: linear-gradient(178.6deg, rgb(20, 36, 50) 2%, rgb(124, 143, 161) 98%);
+} */
+#baner{
+    /* background-color:#c471f5; */
+    /* width: 100vw;
+    height: 100vh; */
+}
+#search{
+    border-radius: 5rem;
+    width: 30rem;
+    height: 3rem;
+    position: relative;
+}
+#buttonsearch{
+    background-color: #c471f5;
+    /* position: fixed; */
+    border-color: black;
+    top: 9.8rem;
+    right: 27rem;
+    width: 5rem;
+    height: 2.5rem;
+    border-radius: 5rem
+}
+#cardproduct{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+#text-card{
+    font-size: 1rem;
+}
+.cardimg{
+    transition: ease-in-out 1s;
+}
+.cardimg:hover{
+    transform: scale3d(2rem);
+}
+.s{
+    display: none;
+}
+.card{
+    width: 20rem;
+    box-shadow: 5px 10px #888888; 
+}
+#mainbanner{
+    height: 20rem;
+    background: radial-gradient(circle at -8.9% 51.2%, rgb(255, 124, 0) 0%, rgb(255, 124, 0) 15.9%, rgb(255, 163, 77) 15.9%, rgb(255, 163, 77) 24.4%, rgb(19, 30, 37) 24.5%, rgb(19, 30, 37) 66%);
+}
+
+@media screen and (max-width: 600px) {
+   #search{
+        width: 20rem;
+   }
+}
+@media screen and (max-width: 400px) {
+ .card{
+    width: 18rem;
+ }
+ #buttonsearch{
+    margin-top: 5px;
+ }   
+}
